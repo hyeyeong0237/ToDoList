@@ -4,27 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    android:background="#FEFFFF"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/taskText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Tasks"
-        android:textColor="@color/black"
-        android:layout_marginStart="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:textSize="32sp" />
+        android:background="#E164C0CC"
+        android:fontFamily="sans-serif-medium"
+        android:text="  ToDoList"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorHint="#6991A3"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tasksRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/taskText"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:nestedScrollingEnabled="true" />
+        android:nestedScrollingEnabled="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -36,10 +42,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="35dp"
         android:background="@android:color/holo_blue_dark"
-        android:backgroundTint="#48C2D1"
-        android:src="@drawable/ic_baseline_add_24" />
+        android:backgroundTint="#76C4CD"
+        android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="#FBF8F8" />
 
 
 </RelativeLayout>
